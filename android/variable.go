@@ -117,6 +117,10 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+		}
+
 		Needs_text_relocations struct {
 			Cppflags []string
 		}
@@ -245,6 +249,7 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
+	Has_legacy_camera_hal1 *bool `json:",omitempty"`
 	Needs_text_relocations *bool `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
 	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
