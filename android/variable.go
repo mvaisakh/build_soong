@@ -117,7 +117,7 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		Needs_platform_textrels struct {
+		Needs_text_relocations struct {
 			Cppflags []string
 		}
 	} `android:"arch_variant"`
@@ -237,7 +237,7 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	Needs_platform_textrels *bool `json:",omitempty"`
+	Needs_text_relocations *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
