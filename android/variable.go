@@ -121,6 +121,15 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+		Device_support_hwfde struct {
+			Cflags []string
+			Header_libs []string
+			Shared_libs []string
+		}
+		Device_support_hwfde_perf struct {
+			Cflags []string
+		}
+
 		Has_legacy_camera_hal1 struct {
 			Cflags []string
 		}
@@ -254,6 +263,8 @@ type productVariables struct {
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
+	Device_support_hwfde  *bool `json:",omitempty"`
+	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1 *bool `json:",omitempty"`
 	Target_process_sdk_version_override *string `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
